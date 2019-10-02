@@ -31,7 +31,6 @@ public class Exercise1
     //--------------------------------main----------------------------------------
     public static void main(String[] args) throws IOException 
     {
-    
         try 
         {
             BufferedReader br = new BufferedReader(new FileReader(filename));
@@ -49,20 +48,12 @@ public class Exercise1
                 weapon.setStrength(Integer.parseInt(parts[5]));
                 weapon.setValue(Integer.parseInt(parts[6]));
                 s = br.readLine();
-                
-                
-            }
-                        
+            }  
         } 
         catch (FileNotFoundException ex) 
         {
             Logger.getLogger(Exercise1.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        Exercise1 ex1 = new Exercise1();
-        ex1.sortDamage();
-        System.out.println(ex1);
-        
     }
     
     public void sortDamage()
@@ -71,4 +62,30 @@ public class Exercise1
     //TODO: Unit Test.
     }
     
+    public void sortCombatType()
+    {
+    Comparator<Weapon> sortByCombatType = (Weapon o1, Weapon o2)->o1.getCombatType().compareTo(o2.getCombatType());
+        //TODO: Unit Test.
+    }
+    
+    public void sortDamageType()
+    {
+        Comparator<Weapon> sortByDamageType = (Weapon o1, Weapon o2)->o1.getDamageType().compareTo(o2.getDamageType());
+        //TODO: Unit Test.
+    }
+    
+    public void sortName()
+    {
+        Comparator<Weapon> sortByName = (Weapon o1, Weapon o2)->o1.getName().compareTo(o2.getName());
+        //TODO: Unit Test.
+    }
+    
+    
+    @FunctionalInterface
+    public interface Printable()
+    {
+        public void print(List<Weapon> weapons);
+    }
+    
+
 }
