@@ -16,23 +16,35 @@ import java.util.logging.*;
 public class Exercise1 
 {
         
-    private static String filename;
+    private static String filename = "C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung2\\weapons.csv";
+    private static List<Weapon> weaponList = new ArrayList<Weapon>();
     
     //"C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung2\\weapons.csv";
-    
+   
+    //--------------------------------Constructor---------------------------------
     public Exercise1(String filename)
     {
                 this.filename = filename;
     }
     
     
+    //--------------------------------main----------------------------------------
     public static void main(String[] args) throws IOException 
     {
     
         try 
         {
             BufferedReader br = new BufferedReader(new FileReader(filename));
-            
+            br.readLine();
+            String s = br.readLine();
+            while(s != null)
+            {
+                Weapon weapon = new Weapon();
+                String[] parts = s.split(";");
+                weapon.setName(parts[0]);
+                /*test*/System.out.println(weapon.name);
+            }
+                        
         } 
         catch (FileNotFoundException ex) 
         {
