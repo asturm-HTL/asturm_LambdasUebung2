@@ -49,6 +49,8 @@ public class Exercise1
                 weapon.setStrength(Integer.parseInt(parts[5]));
                 weapon.setValue(Integer.parseInt(parts[6]));
                 s = br.readLine();
+                
+                
             }
                         
         } 
@@ -56,8 +58,14 @@ public class Exercise1
         {
             Logger.getLogger(Exercise1.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
 
         
     }
+    
+    Comparator<Weapon> sortByDamage = (Weapon o1, Weapon o2)->o1.getDamage()-(o2.getDamage());
+    //TODO: Unit Test.
+    
     
 }
