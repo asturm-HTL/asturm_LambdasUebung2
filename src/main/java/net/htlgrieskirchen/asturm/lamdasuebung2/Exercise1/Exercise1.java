@@ -42,7 +42,12 @@ public class Exercise1
                 Weapon weapon = new Weapon();
                 String[] parts = s.split(";");
                 weapon.setName(parts[0]);
-                /*test*/System.out.println(weapon.name);
+                weapon.setCombatType(CombatType.valueOf(parts[1]));
+                weapon.setDamageType(DamageType.valueOf(parts[2]));
+                weapon.setDamage(Integer.parseInt(parts[3]));
+                weapon.setSpeed(Integer.parseInt(parts[4]));
+                weapon.setStrength(Integer.parseInt(parts[5]));
+                
             }
                         
         } 
