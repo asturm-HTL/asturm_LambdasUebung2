@@ -22,9 +22,9 @@ public class Exercise1
     //"C:\\Users\\user\\Documents\\NetBeansProjects\\asturm_LambdasUebung2\\weapons.csv";
    
     //--------------------------------Constructor---------------------------------
-    public Exercise1(String filename)
+    public Exercise1()
     {
-                this.filename = filename;
+                
     }
     
     
@@ -59,13 +59,16 @@ public class Exercise1
             Logger.getLogger(Exercise1.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        
-
+        Exercise1 ex1 = new Exercise1();
+        ex1.sortDamage();
+        System.out.println(ex1);
         
     }
     
+    public void sortDamage()
+    {
     Comparator<Weapon> sortByDamage = (Weapon o1, Weapon o2)->o1.getDamage()-(o2.getDamage());
     //TODO: Unit Test.
-    
+    }
     
 }
