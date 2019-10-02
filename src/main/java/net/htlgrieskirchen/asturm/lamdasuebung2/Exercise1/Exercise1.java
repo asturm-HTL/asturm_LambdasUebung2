@@ -47,7 +47,8 @@ public class Exercise1
                 weapon.setDamage(Integer.parseInt(parts[3]));
                 weapon.setSpeed(Integer.parseInt(parts[4]));
                 weapon.setStrength(Integer.parseInt(parts[5]));
-                
+                weapon.setValue(Integer.parseInt(parts[6]));
+                s = br.readLine();
             }
                         
         } 
