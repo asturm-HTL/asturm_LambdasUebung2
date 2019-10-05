@@ -94,10 +94,14 @@ public class Weapon
         this.value = value;
     }
     
-    @Override
+        @Override
     public String toString()
     {
-        String returnString = " ";
+        String returnString = 
+                "Name: " + name + "; combatType: " + combatType + "; damageType: "
+                +damageType + "; damage: " + damage + "; speed: " + speed + "; strength: "
+                + strength + "; value: " +value;
+        
         return returnString;
     }
 

@@ -37,8 +37,10 @@ public class Exercise1
             br.readLine();
             String s = br.readLine();
             
+            int counter = 0;
             while(s != null)
             {
+               
                 Weapon weapon = new Weapon();
                 String[] parts = s.split(";");
                 weapon.setName(parts[0]);
@@ -53,7 +55,9 @@ public class Exercise1
                 
                 s = br.readLine();
                 
-                System.out.println(weaponList);
+                System.out.println(weaponList.get(counter));
+                
+                counter++;
                 
                 //System.out.println(parts[5]);
             } 
@@ -88,5 +92,5 @@ public class Exercise1
         Comparator<Weapon> sortByName = (Weapon o1, Weapon o2)->o1.getName().compareTo(o2.getName());
         //TODO: Unit Test.
     }
-    
+   
 }
