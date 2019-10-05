@@ -94,4 +94,12 @@ public class Weapon
         this.value = value;
     }
     
+    @Override
+    public String toString()
+    {
+        String returnString = " ";
+        return returnString;
+    }
+
 }
+

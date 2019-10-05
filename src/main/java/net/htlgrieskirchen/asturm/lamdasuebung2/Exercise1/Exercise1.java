@@ -36,6 +36,7 @@ public class Exercise1
             BufferedReader br = new BufferedReader(new FileReader(filename));
             br.readLine();
             String s = br.readLine();
+            
             while(s != null)
             {
                 Weapon weapon = new Weapon();
@@ -47,8 +48,16 @@ public class Exercise1
                 weapon.setSpeed(Integer.parseInt(parts[4]));
                 weapon.setStrength(Integer.parseInt(parts[5]));
                 weapon.setValue(Integer.parseInt(parts[6]));
+                
+                weaponList.add(weapon);
+                
                 s = br.readLine();
-            }  
+                
+                System.out.println(weaponList);
+                
+                //System.out.println(parts[5]);
+            } 
+            Printable printable =  (weaponList) -> System.out.println(weaponList);
         } 
         catch (FileNotFoundException ex) 
         {
@@ -58,7 +67,7 @@ public class Exercise1
     
     public void sortDamage()
     {
-    Comparator<Weapon> sortByDamage = (Weapon o1, Weapon o2)->o1.getDamage()-(o2.getDamage());
+    Comparator<Weapon> sortByDamage = (Weapon o1, Weapon o2)->o1.getDamage()-o2.getDamage();
     //TODO: Unit Test.
     }
     
@@ -80,12 +89,4 @@ public class Exercise1
         //TODO: Unit Test.
     }
     
-    
-    @FunctionalInterface
-    public interface Printable()
-    {
-        public void print(List<Weapon> weapons);
-    }
-    
-
 }
