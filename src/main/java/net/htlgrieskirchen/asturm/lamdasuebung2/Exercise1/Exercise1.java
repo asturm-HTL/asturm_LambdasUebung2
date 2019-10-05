@@ -37,6 +37,13 @@ public class Exercise1
             br.readLine();
             String s = br.readLine();
             
+            int longestName = 0;
+            int longestCombatType = 6;
+            int longestDamageType = 8;
+            int longestDamage = 0;
+            int longestSpeed = 0;
+            int longestStrength = 0;
+            int longestValue = 0;
             int counter = 0;
             while(s != null)
             {
@@ -57,11 +64,48 @@ public class Exercise1
                 
                 System.out.println(weaponList.get(counter));
                 
-                counter++;
+                if(weapon.getName().length() > longestName)
+                {
+                    longestName = weapon.getName().length();
+                    System.out.println("längster Name:" + longestName);
+                }
+                if(weapon.getDamage() > longestDamage)
+                {
+                    longestDamage = weapon.getDamage();
+                    System.out.println("größter Damage:" + longestDamage);
+                }
+                if(weapon.getSpeed() > longestSpeed)
+                {
+                    longestSpeed = weapon.getSpeed();
+                    System.out.println("längster Speed:" + longestSpeed);
+                }
+                if(weapon.getStrength() > longestStrength)
+                {
+                    longestStrength = weapon.getStrength();
+                    System.out.println("längster Stärke:" + longestStrength);
+                }
+                if(weapon.getValue() > longestValue)
+                {
+                    longestValue = weapon.getValue();
+                    System.out.println("längster Value:" + longestValue);
+                }
                 
+                
+                
+                    counter++;
                 //System.out.println(parts[5]);
             } 
             Printable printable =  (weaponList) -> System.out.println(weaponList);
+            
+            
+            //---------------------Liste in Tabelle ausgeben-----------------------------------
+            
+            String str = 13 + " ";
+            System.out.println(str);
+            
+            
+            
+            
         } 
         catch (FileNotFoundException ex) 
         {
