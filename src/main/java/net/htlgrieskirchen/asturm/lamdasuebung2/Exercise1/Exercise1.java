@@ -64,31 +64,31 @@ public class Exercise1
                 
                 System.out.println(weaponList.get(counter));
                 
-                if(weapon.getName().length() > longestName)
-                {
-                    longestName = weapon.getName().length();
-                    System.out.println("längster Name:" + longestName);
-                }
-                if(weapon.getDamage() > longestDamage)
-                {
-                    longestDamage = weapon.getDamage();
-                    System.out.println("größter Damage:" + longestDamage);
-                }
-                if(weapon.getSpeed() > longestSpeed)
-                {
-                    longestSpeed = weapon.getSpeed();
-                    System.out.println("längster Speed:" + longestSpeed);
-                }
-                if(weapon.getStrength() > longestStrength)
-                {
-                    longestStrength = weapon.getStrength();
-                    System.out.println("längster Stärke:" + longestStrength);
-                }
-                if(weapon.getValue() > longestValue)
-                {
-                    longestValue = weapon.getValue();
-                    System.out.println("längster Value:" + longestValue);
-                }
+                        /*if(weapon.getName().length() > longestName)
+                        {
+                            longestName = weapon.getName().length();
+                            System.out.println("längster Name:" + longestName);
+                        }
+                        if(weapon.getDamage() > longestDamage)
+                        {
+                            longestDamage = weapon.getDamage();
+                            System.out.println("größter Damage:" + longestDamage);
+                        }
+                        if(weapon.getSpeed() > longestSpeed)
+                        {
+                            longestSpeed = weapon.getSpeed();
+                            System.out.println("längster Speed:" + longestSpeed);
+                        }
+                        if(weapon.getStrength() > longestStrength)
+                        {
+                            longestStrength = weapon.getStrength();
+                            System.out.println("längster Stärke:" + longestStrength);
+                        }
+                        if(weapon.getValue() > longestValue)
+                        {
+                            longestValue = weapon.getValue();
+                            System.out.println("längster Value:" + longestValue);
+                        }*/
                 
                 
                 
@@ -99,9 +99,105 @@ public class Exercise1
             
             
             //---------------------Liste in Tabelle ausgeben-----------------------------------
+            String columnName = " ";
+            String columnSpaceName = " ";
             
-            String str = 13 + " ";
-            System.out.println(str);
+            //------------Name------------------------------
+            if (columnName.length() == longestName) 
+            {
+                columnSpaceName = columnName;
+            }
+            else {
+                int diff = longestName - columnName.length();
+                columnSpaceName = columnName;
+                for (int i = 0; i < diff; i++)
+                columnSpaceName += " ";               
+            }
+            //--------------CombatType-----------------------
+            String columnCombatType = " ";
+            String columnSpaceCombatType = " ";
+          
+            if (columnCombatType.length() == longestCombatType) 
+            {
+                columnSpaceCombatType = columnCombatType;
+            }
+            else {
+                int diff = longestCombatType - columnCombatType.length();
+                columnSpaceCombatType = columnCombatType;
+                for (int i = 0; i < diff; i++)
+                columnSpaceCombatType += " ";               
+            }
+            //-------------DamageType----------------------
+            String columnDamageType = " ";
+            String columnSpaceDamageType = " ";
+            
+            if (columnDamageType.length() == longestDamageType) 
+            {
+                columnSpaceDamageType = columnDamageType;
+            }
+            else {
+                int diff = longestDamageType - columnDamageType.length();
+                columnSpaceDamageType = columnDamageType;
+                for (int i = 0; i < diff; i++)
+                columnSpaceDamageType += " ";               
+            }
+            //--------------Damage-------------------
+            String columnDamage = " ";
+            String columnSpaceDamage = " ";
+            
+            if (columnDamage.length() == longestDamage) 
+            {
+                columnSpaceDamage = columnDamage;
+            }
+            else {
+                int diff = longestDamage - columnDamage.length();
+                columnSpaceDamage = columnDamage;
+                for (int i = 0; i < diff; i++)
+                columnSpaceDamage += " ";               
+            }
+            //-------------Speed------------------
+            String columnSpeed = " ";
+            String columnSpaceSpeed = " ";
+            
+            if (columnSpeed.length() == longestSpeed) 
+            {
+                columnSpaceSpeed = columnSpeed;
+            }
+            else {
+                int diff = longestSpeed - columnSpeed.length();
+                columnSpaceSpeed = columnSpeed;
+                for (int i = 0; i < diff; i++)
+                columnSpaceSpeed += " ";               
+            }
+            //-----------------Strength--------------------
+            String columnStrength = " ";
+            String columnSpaceStrength = " ";
+            
+            if (columnStrength.length() == longestStrength) 
+            {
+                columnSpaceStrength = columnStrength;
+            }
+            else {
+                int diff = longestStrength - columnStrength.length();
+                columnSpaceStrength = columnStrength;
+                for (int i = 0; i < diff; i++)
+                columnSpaceStrength += " ";               
+            }
+            //---------------------Value----------------------
+            String columnValue = " ";
+            String columnSpaceValue = " ";
+            
+            if (columnValue.length() == longestValue) 
+            {
+                columnSpaceValue = columnValue;
+            }
+            else {
+                int diff = longestValue - columnValue.length();
+                columnSpaceValue = columnValue;
+                for (int i = 0; i < diff; i++)
+                columnSpaceValue += " ";               
+            }
+            
             
             
             
